@@ -1,13 +1,82 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+   margin: 0;
+   font-family: Roboto, sans-serif;
+   font-size: 14px;
+   box-sizing: border-box;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+}
+
+.country-accordion,
+.info-accordion {
+   margin-top: 1px;
+}
+.info-accordion-wrapper,
+.country-accordion-wrapper {
+   text-align: left;
+}
+.info-accordion-wrapper {
+   margin-top: 30px;
+}
+.country-accordion .summary,
+.info-accordion .summary {
+   min-height: 0;
+}
+.country-accordion .summary {
+   background-color: #ffcf00;
+}
+.country-accordion .summary div,
+.info-accordion .summary div {
+   margin: 3px 0;
+}
+
+.country-accordion .MuiAccordionSummary-root.Mui-expanded,
+.info-accordion .MuiAccordionSummary-root.Mui-expanded {
+   min-height: 0px;
+}
+.MuiAccordion-root.country-accordion.Mui-expanded,
+.MuiAccordion-root.info-accordion.Mui-expanded {
+   margin: 5px 0;
+}
+.MuiAccordion-root.country-accordion {
+   border-radius: 0px;
+   overflow: hidden;
+}
+.MuiAccordionDetails-root {
+   min-height: 100px;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+      monospace;
+}
+
+.map-container {
+   height: 100vh;
+}
+
+.sidebar {
+   background-color: rgba(35, 55, 75, 0.9);
+   color: #fff;
+   padding: 6px 12px;
+   font-family: monospace;
+   z-index: 1;
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   margin: 12px;
+   border-radius: 4px;
+}
+#profile-photo {
+   height: 40px;
+   width: 40px;
+   border-radius: 50px;
+}
+
+#main-overlay {
+   width: 250px;
+   position: absolute;
+   right: 20px;
+   top: 20px;
+   transition: 300ms;
 }
