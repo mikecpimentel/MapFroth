@@ -10,13 +10,72 @@
 .country-accordion,
 .info-accordion {
    margin-top: 1px;
+   width: 200px;
+   transition: 400ms;
+   line-height: 1.4;
+}
+.MuiAccordionDetails-root ul.short-list {
+   margin-bottom: 15px;
+}
+.MuiAccordionDetails-root ul.short-list li {
+   font-size: 0.9rem;
+   margin-bottom: 0px;
+}
+.MuiAccordionDetails-root p {
+   font-size: 0.9rem;
+   margin-bottom: 10px;
+   margin-top: 5px;
+}
+.MuiAccordionDetails-root li a {
+   font-size: 0.9rem;
+
+   color: #1b998b;
+   text-decoration: none;
+}
+.MuiAccordionDetails-root ul.detailed-list {
+   margin-bottom: 15px;
+}
+.MuiAccordionDetails-root ul.detailed-list li {
+   font-size: 0.9rem;
+   margin-bottom: 5px;
+}
+.MuiAccordionDetails-root li span {
+   font-weight: bold;
+   font-size: 0.9rem;
+}
+.MuiPaper-root {
+   width: 200px;
 }
 .info-accordion-wrapper,
 .country-accordion-wrapper {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
    text-align: left;
 }
+.country-accordion.Mui-expanded,
+.info-accordion.Mui-expanded {
+   width: 500px;
+   transition: 200ms;
+}
+.country-accordion .MuiAccordionDetails-root {
+   min-height: 100px;
+}
+.info-accordion .MuiAccordionDetails-root {
+   max-height: 0px;
+   overflow: hidden;
+}
+.country-accordion.Mui-expanded .MuiAccordionDetails-root,
+.info-accordion.Mui-expanded .MuiAccordionDetails-root {
+   transition-property: max-height;
+   transition-delay: 150ms;
+   transition-duration: 700ms;
+   max-height: 300px;
+   overflow: auto;
+}
+
 .info-accordion-wrapper {
-   margin-top: 30px;
+   margin-top: 15px;
 }
 .country-accordion .summary,
 .info-accordion .summary {
@@ -27,12 +86,18 @@
 }
 .country-accordion .summary div,
 .info-accordion .summary div {
-   margin: 3px 0;
+   margin: 5px 0;
 }
 
-.country-accordion .MuiAccordionSummary-root.Mui-expanded,
+.country-accordion .MuiAccordionSummary-root.Mui-expanded {
+   min-height: 0px;
+}
 .info-accordion .MuiAccordionSummary-root.Mui-expanded {
    min-height: 0px;
+   position: sticky;
+   top: 0;
+   background-color: #fff;
+   box-shadow: 0 0 3px 0 #555;
 }
 .MuiAccordion-root.country-accordion.Mui-expanded,
 .MuiAccordion-root.info-accordion.Mui-expanded {
@@ -41,9 +106,6 @@
 .MuiAccordion-root.country-accordion {
    border-radius: 0px;
    overflow: hidden;
-}
-.MuiAccordionDetails-root {
-   min-height: 100px;
 }
 
 code {
@@ -71,12 +133,27 @@ code {
    height: 40px;
    width: 40px;
    border-radius: 50px;
+   display: block;
 }
 
 #main-overlay {
-   width: 250px;
    position: absolute;
-   right: 20px;
-   top: 20px;
+   padding: 20px 20px 5px 5px;
+   right: 0px;
+   top: 0px;
    transition: 300ms;
+   max-height: 100%;
+   overflow-y: auto;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+}
+#main-login-button {
+   background-color: #d7263d;
+   padding: 7px 20px;
+   margin-top: 30px;
+   color: white;
+   font-size: 1.25rem;
+   border-radius: 10px;
+   display: block;
 }

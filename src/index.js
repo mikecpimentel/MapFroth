@@ -14,7 +14,7 @@ ReactDOM.render(
             domain="dev-enhwcift.us.auth0.com"
             clientId="kQPIZrh1ejWDQc33r6xQknzDlVCZ6ITb"
             audience="User Resources"
-            redirectUri="http://localhost:3000"
+            redirectUri="https://mapfroth.com"
          >
             <App />
          </Auth0Provider>
