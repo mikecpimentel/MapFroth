@@ -2,6 +2,8 @@
 
 MapFroth = Map + [Coffee] Froth, two things that go together nicely.
 
+https://mapfroth.com
+
 I love the world and dream of traveling everywhere. I am developing MapFroth to help people like myself plan their next adventures and enable the discovery of interesting destinations.
 
 Tools I've used so far to start MapFroth development:
@@ -11,6 +13,7 @@ Tools I've used so far to start MapFroth development:
 - **Aspose GeoJSON converter** - Boundary data from Natural Earth was not in a format usable by Mapbox. I converted the data to GeoJSON with help from the free converter provided by Aspose
 - **Auth0** - I use an Auth0 free plan to help with some of the social login integrations (Google and Github OAuth 2.0 authentication). I use the authorization code flow with PKCE (proof key for code exchange) as outlined in the OAuth 2.0 specifications. Communication between the client (this page), the back-end API, the auth providers (Google, Github, etc) and Auth0 servers are all secured with Auth0.
 - **Digital Ocean** - Cloud virtual machine. I use Ubuntu 20.04 LTS.
+- **Apache** - Reverse-proxy server
 - **VSCode** - Of course
 
 Note: MapFroth is not mobile friendly yet
