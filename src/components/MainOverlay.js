@@ -9,10 +9,10 @@ import { CountryAccordion } from "./CountryAccordion";
 import LogoutButton from "../logout";
 import LoginButton from "../login";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { TripsSection } from "./TripsSection";
 
 const MainOverlay = (props) => {
    const { user, isAuthenticated } = useAuth0();
-   console.log(user);
 
    return (
       <div style={{ zIndex: 5 }} id="main-overlay">
@@ -25,7 +25,11 @@ const MainOverlay = (props) => {
          >
             {props.data.length > 0 ? (
                props.data.map((item) => (
-                  <CountryAccordion key={item.country_id} data={item} />
+                  <CountryAccordion
+                     key={item.country_id}
+                     data={item}
+                     handleDeleteButton={props.handleDeleteButton}
+                  />
                ))
             ) : (
                <Paper sx={{ padding: "20px" }}>
@@ -239,6 +243,7 @@ const MainOverlay = (props) => {
                </AccordionDetails>
             </Accordion>
          </div>
+         <TripsSection map={props.map} currentPoint={props.currentPoint} />
       </div>
    );
 };

@@ -51,7 +51,7 @@ function App() {
                      fontSize: "3.041rem",
                   }}
                >
-                  Welcome to Mapfroth!
+                  Welcome to Mapfroth
                </h2>
                <p
                   style={{
@@ -61,12 +61,26 @@ function App() {
                      color: "#555",
                   }}
                >
-                  I began this project several days ago (~Apr 15), so
-                  functionality is still very limited.
+                  I began this project on April 15, so functionality is still
+                  limited.
                   <br />
-                  But you are welcome to come inside and take a look!
+                  But you are welcome to come inside!
                </p>
                <LoginButton />
+               <div
+                  style={{
+                     fontSize: "1.25em",
+                     width: "300px",
+                     marginTop: "20px",
+                  }}
+               >
+                  <p>
+                     If you don't want to use your own credentials, you can use
+                     a test account:
+                  </p>
+                  <p style={{ marginTop: "20px" }}>Username: username</p>
+                  <p>Password: password</p>
+               </div>
             </div>
          )}
       </div>

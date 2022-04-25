@@ -82,6 +82,7 @@
    min-height: 0;
 }
 .country-accordion .summary {
+   /* background-color: #ffcf00;*/
    background-color: #ffcf00;
 }
 .country-accordion .summary div,
@@ -156,4 +157,20 @@ code {
    font-size: 1.25rem;
    border-radius: 10px;
    display: block;
+}
+.mapboxgl-ctrl-geocoder {
+   font-size: 1.25rem !important;
+   width: 350px !important;
+   padding: 5px;
+   text-align: left;
+}
+#left-overlay {
+   background-color: #f05;
+   position: absolute;
+   top: 50px;
+   left: 0;
+}
+.mapboxgl-ctrl-top-left {
+   margin-top: 50px;
+   margin-left: 10px;
 }

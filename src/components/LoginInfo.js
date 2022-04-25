@@ -1,6 +1,11 @@
 import { useAuth0 } from "@auth0/auth0-react";
 import { useEffect, useState } from "react";
 
+const apiURL =
+   process.env.NODE_ENV === "development"
+      ? "http://localhost:3001"
+      : "https://api.mapfroth.com";
+
 export const LoginInfo = () => {
    const { getAccessTokenSilently } = useAuth0();
    const [apiResponse, setApiReponse] = useState({});
@@ -13,7 +18,7 @@ export const LoginInfo = () => {
             const token = await getAccessTokenSilently();
             console.log(token);
 
-            const response = await fetch("http://localhost:3001/users", {
+            const response = await fetch(`${apiURL}/users`, {
                headers: {
                   Authorization: `Bearer ${token}`,
                },

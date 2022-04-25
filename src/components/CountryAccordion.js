@@ -2,7 +2,7 @@ import { AccordionSummary, AccordionDetails, Accordion } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
-export const CountryAccordion = ({ data }) => {
+export const CountryAccordion = ({ data, handleDeleteButton }) => {
    return (
       <Accordion className="country-accordion">
          <AccordionSummary expandIcon={<ExpandMoreIcon />} className="summary">
@@ -13,8 +13,16 @@ export const CountryAccordion = ({ data }) => {
             )}
          </AccordionSummary>
          <AccordionDetails>
-            Nothing yet to see here! But soon you should be able to do more with
-            this box.
+            <p>Nothing yet to see here!</p>
+            <p>
+               Note: Delete button deletes item from database, but country
+               outline will remain until you refresh the page (or until I fix
+               it, whichever comes first).
+            </p>
+
+            <button onClick={() => handleDeleteButton(data.country_id)}>
+               Delete
+            </button>
          </AccordionDetails>
       </Accordion>
    );
