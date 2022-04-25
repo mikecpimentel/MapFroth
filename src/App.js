@@ -69,8 +69,7 @@ function App() {
                <LoginButton />
                <div
                   style={{
-                     fontSize: "1.25em",
-                     width: "300px",
+                     width: "500px",
                      marginTop: "20px",
                   }}
                >
@@ -78,8 +77,14 @@ function App() {
                      If you don't want to use your own credentials, you can use
                      a test account:
                   </p>
-                  <p style={{ marginTop: "20px" }}>Username: username</p>
-                  <p>Password: password</p>
+                  <p style={{ marginTop: "20px", fontSize: "1.25rem" }}>
+                     Email:&nbsp;&nbsp;&nbsp; user@mapfroth.com
+                  </p>
+                  <br />
+
+                  <p style={{ fontSize: "1.25rem" }}>
+                     Password:&nbsp;&nbsp;&nbsp; e^M$x?$8zCMk$5f
+                  </p>
                </div>
             </div>
          )}
